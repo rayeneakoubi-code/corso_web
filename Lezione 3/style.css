@@ -1,0 +1,59 @@
+body{
+    align-items: center;
+    align-content: center;
+}
+
+div{
+     border:solide, 15px;
+}
+
+.dashboard{
+    margin-left: 25%;
+    border:solide, 15px;
+    background-color:aliceblue;
+    width: 50%;
+    padding: 3%;
+}
+
+.carte{
+    display: flex;
+
+
+}
+
+.carta{
+    border: solide, 1px;
+border-radius: 7%;
+width: 50%;
+padding: 5%;
+margin-right: 5%;
+}
+
+#carta2{
+    margin-left: 5%;
+    background-color:cyan;
+}
+
+#carta1{
+    background-color:rgb(151, 240, 116);
+}
+
+h1{
+    color:blue;
+}
+.si{
+    color:green;
+}
+
+.no{
+    color:red;
+}
+
+table{
+    width:100%;
+    margin-top: 5%;
+}
+
+th{
+    text-align: left;
+}
