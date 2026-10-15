@@ -165,7 +165,7 @@ th, td {
     /* bordo grigio chiaro attorno a ogni cella */
     border: 1px solid lightgray;
     /* spazio dentro ogni cella */
-    padding: 8px;
+    padding: 4px;
     /* testo allineato a sinistra */
     text-align: center;
 }
@@ -182,16 +182,19 @@ th {
     background-color: lightgreen;  
     /* angoli arrotondati */
     border-radius: 4px;
+    padding: 3px;
+    color: green
 }
  
 /* etichetta azzurra "Completed" */
 .completo {
     /* sfondo azzurro */
     background-color: lightblue;
-    /* spazio dentro l'etichetta */
-    padding: 3px 8px;
     /* angoli arrotondati */
     border-radius: 4px;
+    color: blue;
+    /* spazio dentro l'etichetta */
+    padding: 3px;
 }
  
 /* =====================================================
