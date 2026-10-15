@@ -1,0 +1,232 @@
+/* =====================================================
+   BASE: regole per tutta la pagina
+   ===================================================== */
+ 
+/* body = tutta la pagina visibile */
+body {
+    /* la pagina occupa il 70% della larghezza dello schermo */
+    width: 70%;
+    /* 0 = niente spazio sopra/sotto, auto = lascia lo stesso spazio a destra e a sinistra, quindi CENTRA la pagina */
+    margin: 0 auto;
+    /* colore di sfondo della pagina (grigio-azzurro molto chiaro) */
+    background-color: #f7f9fc;
+    /* tipo di carattere. Se Arial non c'è, usa uno sans-serif qualsiasi */
+    font-family: Arial, sans-serif;
+}
+ 
+/* la virgola significa: vale per h1 E per h2 */
+h1, h2 {
+    /* colore del testo: blu scuro */
+    color: #17375e;
+}
+ 
+/* .blu = classe per le parole blu nel testo (es. "Multimedia Lab!") */
+.blu {
+    /* testo blu */
+    color: blue;
+    /* testo in grassetto */
+    font-weight: bold;
+}
+ 
+/* =====================================================
+   SOPRA: testo a sinistra, immagine a destra
+   ===================================================== */
+ 
+.sopra {
+    /* flex: i figli (testo e immagine) vanno uno accanto all'altro */
+    display: flex;
+    /* li centra in verticale (in mezzo all'altezza del box) */
+    align-items: center;
+    /* sfondo azzurro chiaro */
+    background-color: aliceblue;
+    /* spazio DENTRO il box, tra il bordo e il contenuto */
+    padding: 3%;
+    /* angoli arrotondati */
+    border-radius: 12px;
+    
+}
+ 
+.testo {
+    /* il testo occupa il 60% della larghezza del box .sopra */
+    width: 60%;
+}
+ 
+.immagine {
+    /* l'immagine occupa il 40% della larghezza (60% + 40% = 100%) */
+    width: 40%;
+    /* angoli arrotondati anche per l'immagine */
+    border-radius: 12px;
+}
+ 
+/* =====================================================
+   RIGA 1: le 3 carte colorate
+   ===================================================== */
+ 
+.riga1 {
+    /* flex: le 3 carte stanno una accanto all'altra */
+    display: flex;
+    /* spazio tra una carta e l'altra */
+    gap: 3%;
+    /* spazio FUORI, sotto la riga */
+    margin-bottom: 3%;  
+}
+ 
+/* ">" = solo i div che stanno direttamente dentro .riga1 (le 3 carte) */
+.riga1 > div {
+    /* flex: 1 = ogni carta prende lo stesso spazio (tutte larghe uguale) */
+    flex: 1;
+    /* testo centrato in orizzontale */
+    text-align: center;
+    /* spazio dentro la carta */
+    padding: 3%;
+    /* angoli arrotondati */
+    border-radius: 12px;
+}
+ 
+/* i p dentro .riga1 = i numeri grandi (8, 42, 3) */
+.riga1 p {
+    /* numero grande */
+    font-size: 40px;
+    /* numero in grassetto */
+    font-weight: bold;
+    /* toglie lo spazio sopra e sotto il numero */
+    margin: 1%;
+}
+ 
+/* carta 1: Active Projects */
+.progetto {
+    /* sfondo azzurro chiaro */
+    background-color: aliceblue;
+}
+/* titolo (h2) e numero (p) della carta 1 in blu */
+.progetto h2, .progetto p { color: blue; }
+ 
+/* carta 2: Total Students */
+.studenti {
+    /* sfondo verde chiaro, scritto con rgb(rosso, verde, blu) */
+    background-color: rgb(200, 245, 210);
+}
+/* titolo e numero della carta 2 in verde */
+.studenti h2, .studenti p { color: green; }
+ 
+/* carta 3: Available Rooms */
+.camere {
+    /* sfondo giallo chiaro */
+    background-color: rgb(255, 240, 200);
+}
+/* titolo e numero della carta 3 in arancione */
+.camere h2, .camere p { color: orange; }
+ 
+/* =====================================================
+   RIGA 2: i 3 box bianchi
+   ===================================================== */
+ 
+.riga2 {
+    /* flex: i 3 box stanno uno accanto all'altro */
+    display: flex;
+    /* spazio tra i box */
+    gap: 3%;
+    /* spazio FUORI, sotto la riga */
+    margin-bottom: 3%;
+}
+ 
+/* i 3 div dentro .riga2 */
+.riga2 > div {
+    /* tutti larghi uguale (all'inizio) */
+    flex: 1;
+    /* sfondo bianco */
+    background-color: white;
+    /* bordo: 1px di spessore, linea continua, grigio chiaro */
+    border: 1px solid lightgray;
+    /* angoli arrotondati */
+    border-radius: 12px;
+    /* spazio dentro il box */
+    padding: 2%;
+}
+ 
+/* nth-child(2) = il SECONDO figlio, cioè il box della tabella */
+.riga2 > div:nth-child(2) {
+    /* flex: 2 = largo il doppio degli altri */
+    flex: 2;
+}
+ 
+/* =====================================================
+   TABELLA
+   ===================================================== */
+ 
+table {
+    /* la tabella occupa tutto il box */
+    width: 100%;
+    border-collapse: collapse;  
+}
+ 
+/* th = celle del titolo, td = celle normali */
+th, td {
+    /* bordo grigio chiaro attorno a ogni cella */
+    border: 1px solid lightgray;
+    /* spazio dentro ogni cella */
+    padding: 8px;
+    /* testo allineato a sinistra */
+    text-align: center;
+}
+ 
+/* solo le celle del titolo (Project, Team...) */
+th {
+    /* sfondo azzurro chiaro */
+    background-color: aliceblue;
+}
+ 
+/* etichetta verde "Active" */
+.attivo {
+    /* sfondo verde chiaro */
+    background-color: lightgreen;  
+    /* angoli arrotondati */
+    border-radius: 4px;
+}
+ 
+/* etichetta azzurra "Completed" */
+.completo {
+    /* sfondo azzurro */
+    background-color: lightblue;
+    /* spazio dentro l'etichetta */
+    padding: 3px 8px;
+    /* angoli arrotondati */
+    border-radius: 4px;
+}
+ 
+/* =====================================================
+   NUMERI DELL'EQUIPMENT (5, 8, 4, 12)
+   ===================================================== */
+ 
+.numero {
+    /* float: right = sposta il numero a destra */
+    float: right;
+    /* sfondo azzurro chiaro */
+    background-color: aliceblue;
+    /* numero blu */
+    color: blue;
+    /* angoli arrotondati */
+    border-radius: 4px;
+}
+ 
+/* =====================================================
+   RIGA 3: Next Workshop (ultimo div)
+   ===================================================== */
+ 
+.riga3 {
+    /* sfondo viola chiaro (lavender) */
+    background-color: lavender;
+    /* spazio dentro il box */
+    padding: 3%;
+    /* angoli arrotondati */
+    border-radius: 12px;
+    /* spazio FUORI, sotto il box */
+    margin-bottom: 3%;
+}
+ 
+/* la data "October 28, 2026" */
+.h3 {
+    /* colore viola */
+    color: purple;
+}
+ 
