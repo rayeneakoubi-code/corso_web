@@ -1,0 +1,25 @@
+body{
+    display:flex;
+}
+
+.inizio{
+    background-color: rgb(53, 53, 53);
+}
+
+.accoglimento{
+    background-color: white;
+
+}
+
+
+h1{
+    font-size: bold;
+}
+
+h2{
+    font-size: 50px;
+}
+
+.biblioteca{
+    border-radius: 200px;
+}
