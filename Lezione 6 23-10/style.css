@@ -1,41 +1,66 @@
-header{
-    display: 1fel;
+header {
+    display: flex;
     gap: 30px;
     width: 100%;
     background-color: blue;
 }
 
-nav{
-    width: 100;
+nav {
+    display: flex;
+    gap: 30px;
+    width: 100%;
 }
 
-nav a{
-    gap: 30;
-    padding-left: 4%;
-    padding-top: 4%;
-    align-items: center;
+nav a {
+    padding: 4%;
     color: blanchedalmond;
     background-color: blueviolet;
     text-decoration: none;
 }
 
-
-nav a:hover{
+nav a:hover {
     text-decoration: underline;
-    transform:  scale(1.1) rotae(14deg);
-}
-
-
-.principale:hover{
-    width: 400px;
-    background-color: bisque;
-    border-radius: 5%;
-    transition: width 12s;
-    transform: rotate(15deg);
     transform: scale(1.1) rotate(14deg);
 }
 
-.barra-scorrimento{
+.principale {
+    width: 200px;
+    transition: all 1s;
+}
+
+.principale:hover {
+    width: 400px;
+    background-color: bisque;
+    border-radius: 5%;
+    transform: scale(1.1) rotate(14deg);
+}
+
+/* Immagini che scorrono */
+.galleria {
+    overflow: hidden;
+    width: 100%;
+}
+
+.traccia {
+    display: flex;
+    width: max-content;
+    animation: scorri 15s linear infinite;
+}
+
+.barra-scorrimento {
     width: 300px;
     height: 120px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+@keyframes scorri {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+
+/* Facoltativo: si ferma col mouse */
+.traccia:hover{
+    animation-play-state: paused;
 }
