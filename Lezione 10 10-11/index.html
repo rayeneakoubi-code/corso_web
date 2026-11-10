@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preventivo bici</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+    <div class="scatola">
+        <h1>Configura la tua bici</h1>
+ 
+        <form id="modulo">
+ 
+            <label for="modello">Modello:</label>
+            <select id="modello">
+                <option value="300">Città - 300 €</option>
+                <option value="450">Montagna - 450 €</option>
+                <option value="600">Corsa - 600 €</option>
+            </select>
+ 
+            <label for="ruote">Dimensione ruote:</label>
+            <select id="ruote">
+                <option value="0">26 pollici - +0 €</option>
+                <option value="50">27.5 pollici - +50 €</option>
+                <option value="80">29 pollici - +80 €</option>
+            </select>
+ 
+            <h2>Accessori:</h2>
+            <div class="riga">
+                <input type="checkbox" id="casco" value="30">
+                <label for="casco">Casco (+30 €)</label>
+            </div>
+            <div class="riga">
+                <input type="checkbox" id="luci" value="20">
+                <label for="luci">Luci (+20 €)</label>
+            </div>
+            <div class="riga">
+                <input type="checkbox" id="borraccia" value="10">
+                <label for="borraccia">Borraccia (+10 €)</label>
+            </div>
+ 
+            <label for="quantita">Quantità:</label>
+            <input type="number" id="quantita" value="1" min="1">
+ 
+            <h2>Consegna:</h2>
+            <div class="riga">
+                <input type="radio" id="ritiro" name="consegna" value="0" checked>
+                <label for="ritiro">Ritiro in negozio (gratis)</label>
+            </div>
+            <div class="riga">
+                <input type="radio" id="domicilio" name="consegna" value="25">
+                <label for="domicilio">A domicilio (+25 €)</label>
+            </div>
+ 
+            <label for="promo">Codice promozionale:</label>
+            <input type="text" id="promo" placeholder="Prova: SCONTO10">
+ 
+            <button type="button" id="calcola">Calcola preventivo</button>
+        </form>
+ 
+        <div id="risultato"></div>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+ 
+</html>
+ 
