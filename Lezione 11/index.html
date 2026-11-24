@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo consumo energetico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="blu">
+        <div class="bianco">
+            <form id="modulo">
+
+                <h1>Calcolo consumo energetico</h1>
+
+                <label for="testo">Nome dispositivo</label>
+                <input type="text" id="testo">
+
+                <label for="numero">Potenza (watt)</label>
+                <input type="number" id="numero">
+
+                <label for="orario">Ore di utilizzo al giorno</label>
+                <input type="number" id="orario">
+
+                <button type="button" id="btnCalcola">Calcola consumo</button>
+                <button type="button" id="btnAzzera">Azzera</button>
+                
+                <div class="blu chiaro" id="Risultato"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
